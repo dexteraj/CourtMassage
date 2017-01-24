@@ -15,7 +15,7 @@ app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname, 'client')));
 
 //Body Parser MW
-app/use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
 app.use('/', index)
