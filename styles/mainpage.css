@@ -1,0 +1,9 @@
+#main-page-wrapper
+{
+    height: auto;
+    width: auto;
+    background-color: blue;
+}
+p {
+    color: red;
+}
