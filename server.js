@@ -22,6 +22,8 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use('/', index)
 app.use('/api', clients);
 
+
+//Listen to start server
 app.listen(port,function(){
     console.log('Sever started on port ' , +port)
 })
