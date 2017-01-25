@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://andy:andy@dbh83.mlab.com:27837/mytasklist_andy',['Clients'])
+var db = mongojs('mongodb://andy:andy@ds023694.mlab.com:23694/massageclients',['clients'])
+
 
 router.get('/clients', function (req, res, next) {
-    db.tasks.find(function (err,clients) {
+    db.clients.find(function (err,clients) {
         if(err){
             res.send(err)
         }
@@ -14,7 +15,7 @@ router.get('/clients', function (req, res, next) {
 
 //Get single Tasks
 router.get('/client/:id', function (req, res, next) {
-    db.tasks.findOne({_id: mongojs.ObjectId(req.params.id)},function (err,client) {
+    db.clients.findOne({_id: mongojs.ObjectId(req.params.id)},function (err,client) {
         if(err){
             res.send(err)
         }
