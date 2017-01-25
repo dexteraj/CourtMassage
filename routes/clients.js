@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongojs = require('mongojs');
-//var db = mongojs('mongodb://andy:andy@dbh83.mlab.com:27837/mytasklist_andy',['tasks'])
+var db = mongojs('mongodb://andy:andy@dbh83.mlab.com:27837/mytasklist_andy',['Clients'])
 
 router.get('/clients', function (req, res, next) {
     db.tasks.find(function (err,clients) {
