@@ -3,7 +3,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var tasks = require('./routes/tasks');
+var clients = require('./routes/clients');
 var port = 3000;
 var app = express();
 
@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
 app.use('/', index)
-app.use('/api', tasks);
+app.use('/api', clients);
 
 app.listen(port,function(){
     console.log('Sever started on port ' , +port)
